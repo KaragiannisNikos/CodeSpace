@@ -1,0 +1,62 @@
+1.	What is Software Testing?
+
+Software testing is the process of evaluating and verifying that a software product or application does what it's supposed to do.
+
+
+2.	What are the dangers of release untested Software?
+
+Releasing software without adequate testing can have many negative consequences, including: 
+
+Security vulnerabilities: Untested software can have security holes that hackers can exploit to steal sensitive information. This can lead to data breaches, financial losses, and damage to a company's reputation. 
+
+Bugs and defects: Software that isn't tested thoroughly enough may contain bugs and defects that could have been avoided. 
+
+Increased support costs: Businesses may have to spend more on support for untested software. 
+
+Legal and regulatory repercussions: Untested software may lead to legal and regulatory issues. 
+
+Reduced adoption: Untested software may be less adopted and used by users. 
+
+Competitive disadvantage: Untested software may put a business at a disadvantage to its competitors. 
+
+Rigorous testing is important to ensure that software meets the needs of users and stakeholders. 
+
+
+3.	Types Of Software Testing:
+
+
+Manual Testing: Testers manually check software by navigating through the application and comparing the actual results with expected outcomes.
+
+Automated Testing: This involves using tools and scripts to automate the testing process, especially for repetitive tasks like regression testing.
+
+Functional Testing: Ensures that the software behaves as expected based on the requirements.
+
+Performance Testing: Tests the software’s performance under different conditions, including load and stress testing.
+
+Security Testing: Focuses on identifying vulnerabilities in the system to prevent breaches.
+
+Usability Testing: Assesses the user-friendliness and the overall experience for end-users.
+
+3a.	What is Functional Testing?
+
+ Functional testing is a type of software testing that verifies if an application's features work as intended, based on predetermined specifications. 
+
+3b.	3 examples.
+
+Focus: Functional testing focuses on the results of processing, not how the processing works. 
+ 
+Goal: The goal is to ensure that the software performs the functions it was designed to do. 
+
+Results: Tests pass or fail. 
+
+3c.	What is Non-Functional Testing?
+
+Non-Functional Testing is a type of testing used to evaluate a software application’s performance, usability, dependability, and other non-functional characteristics. It is intended to test a system’s readiness according to non-functional criteria that functional testing never considers.
+
+3d.	3 examples.
+
+Load Testing: The system’s loading capability is tested during load testing. The system can handle increasing simultaneous users because of its loading capacity. If you want to run a quick website speed test, check your speed scores.
+
+Security testing: is used to find the software application’s weaknesses. The testing is carried out by looking into the design of the system and the mindset of an attacker. Finding the parts of the code where an attack is most likely to occur allows for creating test cases.
+
+Portability Testing: The software’s ability to run on many operating systems without experiencing any bugs is tested for portability. The software’s functionality under the same operating system but with varied hardware is also tested in this test.
