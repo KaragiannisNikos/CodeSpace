@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the Number</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container text-center mt-5">
+      <h1>Guess the Number</h1>
+      <p>Choose a number between 0 and 10.</p>
+      <div class="mb-3">
+        <input
+          type="number"
+          id="myChoice"
+          class="form-control w-25 mx-auto"
+          placeholder="Enter your choice"
+          min="0"
+          max="10"
+        />
+        <div class="text-danger" id="error" style="display: none">
+          Please enter a valid number between 0 and 10.
+        </div>
+      </div>
+      <button id="submitBtn" onclick="playGame()" class="btn btn-primary">
+        Submit
+      </button>
+
+      <!-- Container to wrap result and play again button -->
+      <div class="mt-4 text-center">
+        <h3 id="result"></h3>
+      </div>
+      <!-- Button to play again the game 
+      <button
+        id="playAgainBtn"
+        onclick="resetGame()"
+        class="btn btn-secondary mt-3"
+        style="display: none"
+      >
+        Play Again
+      </button>-->
+    </div>
+
+    <!-- JavaScript logic -->
+    <script>
+      function playGame() {
+        // Get user choice and remove any whitespace
+        let my_choice = document.getElementById("myChoice").value.trim();
+
+        // Get the error message element
+        let errorElement = document.getElementById("error");
+
+        // Validate the input
+        if (my_choice === "" || my_choice < 0 || my_choice > 10) {
+          // Show error message if the input is invalid
+          errorElement.style.display = "block";
+          document.getElementById("result").innerText = ""; // Clear result
+          return;
+        } else {
+          // Hide error message if input is valid
+          errorElement.style.display = "none";
+        }
+
+        // Generate random number between 0 and 10 for computer
+        let computer_choice = Math.floor(Math.random() * 11);
+
+        // Initialize result variable
+        let result = "";
+
+        // Compare choices
+        if (my_choice == computer_choice) {
+          result = `You answered ${my_choice}. This is the correct answer!`;
+        } else {
+          result = `You answered ${my_choice}. The correct answer is ${computer_choice}.`;
+        }
+
+        // Display result on the page
+        document.getElementById("result").innerText = result;
+
+        // Show "Play Again" button and hide "Submit" button
+        document.getElementById("submitBtn").style.display = "none";
+        // document.getElementById("playAgainBtn").style.display = "block";
+      }
+
+      /* function resetGame() {
+        // Reset input field, result text, and hide error message
+        document.getElementById("myChoice").value = "";
+        document.getElementById("result").innerText = "";
+        document.getElementById("error").style.display = "none";
+
+        // Hide "Play Again" button and show "Submit" button
+        document.getElementById("playAgainBtn").style.display = "none";
+        document.getElementById("submitBtn").style.display = "block";
+      }*/
+    </script>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
